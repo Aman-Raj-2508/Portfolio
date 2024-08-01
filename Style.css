@@ -17,6 +17,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 10;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -77,6 +78,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background: transparent;
+    margin-bottom: 10rem;
 }
 
 
@@ -179,4 +181,144 @@ body {
     width: 100%;
     padding: 1rem;
     font-size: 1rem;
+}
+
+/* About Me Section Styles */
+
+.Intro-abt {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.Intro-abt span {
+    color: red;
+}
+
+/* .about-container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    margin: 0 auto;
+}
+
+.about-container .my-img {
+    height: 400px;
+    width: 400px;
+    margin: 0rem 2rem;
+}
+
+.about-container .my-img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.8rem;
+} */
+
+.about-container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    margin: 0 auto;
+}
+
+.about-container .my-img {
+    height: 350px;
+    width: 380px;
+    margin: 0rem 2rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.about-container .my-img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.8rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.about-container .my-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.about-container .my-img:hover {
+    transform: scale(1.05) rotate(3deg);
+}
+
+.about-container .my-img:hover img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.about-container .my-img:hover::before {
+    opacity: 1;
+}
+
+.about-container .about-me {
+    height: 100%;
+    width: 100%;
+}
+
+.about-me-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.social-media {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: -50px;
+    z-index: 1;
+    gap: 0.5rem;
+}
+
+.social-media a {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    transition: background 0.5s ease;
+    border: 1px solid white;
+}
+
+.social-media a .fa-brands {
+    font-size: 1.25rem;
+    line-height: 3rem;
+    /* Center the icon vertically */
+    position: relative;
+    z-index: 10;
+}
+
+.social-media a::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background: linear-gradient(-45deg, #ed1c94, #ffec17);
+    transition: top 0.5s ease;
+    z-index: 1;
+}
+
+.social-media a:hover::after {
+    top: 0;
 }
