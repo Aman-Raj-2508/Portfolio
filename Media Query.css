@@ -1,0 +1,53 @@
+@media (max-width:1070px) {
+    .text h1 {
+        font-size: 3rem;
+    }
+
+    .text h2 {
+        font-size: 2rem;
+    }
+
+    .text p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:826px) {
+    .text h1 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    #name h1 span {
+        font-size: 1.5rem;
+    }
+
+    .text h2 {
+        font-size: 1.5rem;
+    }
+
+    .text p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:600px) {
+
+    .profile-img img {
+        margin-top: 2rem;
+    }
+
+    .profile-container {
+        flex-direction: column-reverse;
+    }
+
+    .nav-tags .nav-tag-div {
+        display: none;
+    }
+
+    .nav-tags>i {
+        color: red;
+        display: inline-block;
+    }
+
+}
