@@ -10,6 +10,22 @@
     .text p {
         font-size: 0.8rem;
     }
+
+    .about-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .about-container .my-img {
+        width: 320px;
+    }
+
+    .about-container .about-me {
+        width: 100%;
+    }
+
 }
 
 @media (max-width:826px) {
@@ -28,6 +44,17 @@
 
     .text p {
         font-size: 0.7rem;
+    }
+
+    .resume {
+        gap: 0;
+        padding: 0.5rem 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .resume a {
+        gap: 0.5rem;
+        font-size: 0.5rem
     }
 }
 
@@ -50,4 +77,43 @@
         display: inline-block;
     }
 
+    .about-container .my-img {
+        width: 70%;
+    }
+
+    .about-me-container {
+        gap: 2rem;
+    }
+
+    .about-me-container h3 {
+        font-size: 0.7rem;
+    }
+
+    .social-media a {
+        width: 2rem;
+        height: 2rem;
+        background: linear-gradient(-45deg, #ffffff, #ff0000);
+        color: white;
+        animation: updown 3s linear infinite;
+    }
+
+    .social-media a .fa-brands {
+        font-size: 1rem;
+        line-height: 2rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .social-media a::after,
+    .about-container .my-img::before {
+        display: none;
+    }
+
+    .about-container .my-img:hover img {
+        transform: scale(1);
+    }
+
+    .Intro-abt {
+        font-size: 2.5rem;
+    }
 }

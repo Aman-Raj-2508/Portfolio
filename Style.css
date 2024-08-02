@@ -45,8 +45,9 @@ body {
 .nav-tags>.nav-tag-div a {
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.25rem;
     position: relative;
+    animation: 5s ease 0s infinite normal none running color-animation;
 }
 
 .nav-tags>.nav-tag-div a::after {
@@ -173,14 +174,44 @@ body {
 }
 
 .text h2 {
-    font-size: 2.5rem;
-    animation: 5s ease 0s infinite normal none running color-animation;
+    font-size: 3.5rem;
+    animation: 5s ease 0s infinite normal none running color-animation, updown 3s linear infinite;
+    padding: 1rem 0 0 0;
 }
 
 .text p {
     width: 100%;
-    padding: 1rem;
+    padding: 2rem 0 0 0;
     font-size: 1rem;
+}
+
+.resume {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: capitalize;
+    background: linear-gradient(90.21deg, rgba(255, 128, 128, 0.5) -5.91%, rgba(255, 192, 192, 0.5) 111.58%);
+    padding: 1% 2%;
+    border-radius: 5px;
+    margin: 4rem 0;
+    overflow: hidden;
+    animation: updown 3s linear infinite;
+}
+
+.resume a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.resume h3,
+i {
+    text-decoration: none;
 }
 
 /* About Me Section Styles */
@@ -190,37 +221,18 @@ body {
     margin: 0 auto;
     text-align: center;
     font-size: 3.5rem;
+    animation: 5s ease 0s infinite normal none running color-animation;
 }
 
 .Intro-abt span {
     color: red;
 }
 
-/* .about-container {
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    padding: 4rem;
-    margin: 0 auto;
-}
-
-.about-container .my-img {
-    height: 400px;
-    width: 400px;
-    margin: 0rem 2rem;
-}
-
-.about-container .my-img img {
-    height: 100%;
-    width: 100%;
-    border-radius: 0.8rem;
-} */
-
 .about-container {
     width: 95%;
     display: flex;
     justify-content: space-between;
-    padding: 4rem;
+    padding-block: 4rem;
     margin: 0 auto;
 }
 
@@ -253,12 +265,8 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
-.about-container .my-img:hover {
-    transform: scale(1.05) rotate(3deg);
-}
-
 .about-container .my-img:hover img {
-    transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1);
 }
 
 .about-container .my-img:hover::before {
@@ -266,43 +274,45 @@ body {
 }
 
 .about-container .about-me {
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 70%;
+    flex-basis: 90%;
 }
 
-.about-me-container {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+.about-container .about-me .about-me-para {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
 }
 
 .social-media {
     display: flex;
     position: absolute;
     bottom: 10px;
-    left: -50px;
     z-index: 1;
-    gap: 0.5rem;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .social-media a {
     position: relative;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     color: #fff;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
     overflow: hidden;
-    margin-right: 10px;
-    transition: background 0.5s ease;
+    transition: 0.5s ease;
     border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.644);
+    color: rgb(162, 66, 66);
+    animation: updown 3s linear infinite;
 }
 
 .social-media a .fa-brands {
-    font-size: 1.25rem;
-    line-height: 3rem;
-    /* Center the icon vertically */
+    font-size: 1rem;
+    line-height: 2.5rem;
     position: relative;
     z-index: 10;
 }
@@ -314,11 +324,48 @@ body {
     position: absolute;
     top: -100%;
     left: 0;
-    background: linear-gradient(-45deg, #ed1c94, #ffec17);
+    background: linear-gradient(-45deg, #ffffff, #ff0000);
     transition: top 0.5s ease;
     z-index: 1;
+    border-radius: 50%;
 }
 
 .social-media a:hover::after {
     top: 0;
+}
+
+.social-media a:hover {
+    color: #ffffff;
+}
+
+.about-me-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem 0 0 0;
+    animation: 5s ease 0s infinite normal none running color-animation;
+}
+
+.about-me-container h3 {
+    cursor: pointer;
+    width: fit-content;
+    font-size: 1rem;
+    position: relative;
+}
+
+.about-me-container h3::after {
+    content: '';
+    width: 0;
+    /* To hide the line initially*/
+    height: 3px;
+    position: absolute;
+    background: #ff004f;
+    left: 50%;
+    bottom: -6px;
+    transition: all 0.5s ease-in-out;
+}
+
+.about-me-container h3:hover::after {
+    left: 0;
+    width: 100%;
 }
