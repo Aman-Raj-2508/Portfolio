@@ -78,8 +78,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
-    margin-bottom: 10rem;
 }
 
 
@@ -232,13 +230,12 @@ i {
     width: 95%;
     display: flex;
     justify-content: space-between;
-    padding-block: 4rem;
     margin: 0 auto;
 }
 
 .about-container .my-img {
-    height: 350px;
-    width: 380px;
+    height: 450px;
+    width: 400px;
     margin: 0rem 2rem;
     overflow: hidden;
     position: relative;
@@ -368,4 +365,41 @@ i {
 .about-me-container h3:hover::after {
     left: 0;
     width: 100%;
+}
+
+/* Project-Section */
+.project-main-container {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.project-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+}
+
+.project-heading h1 {
+    font-size: 3.5rem;
+    animation: color-animation 5s infinite;
+}
+
+.project-heading h1::first-letter {
+    color: #ff004f;
+}
+
+.project-heading .img img {
+    width: 10rem;
+    animation: updown 3s linear infinite;
+}
+
+.project-container p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
+section {
+    padding-top: 5rem;
 }

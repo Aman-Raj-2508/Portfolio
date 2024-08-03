@@ -11,6 +11,12 @@
         font-size: 0.8rem;
     }
 
+
+    .about-main-container {
+        padding-top: 3rem;
+        margin-bottom: 0;
+    }
+
     .about-container {
         flex-direction: column;
         justify-content: center;
@@ -115,5 +121,17 @@
 
     .Intro-abt {
         font-size: 2.5rem;
+    }
+
+    .project-heading h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-heading .img img {
+        width: 5rem;
+    }
+
+    .project-heading {
+        height: 7rem;
     }
 }
