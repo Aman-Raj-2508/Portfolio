@@ -3,7 +3,7 @@ function profileAnimation() {
     let tl = gsap.timeline();
 
     tl.from("#name h1", {
-        y: 100,
+        y: 80,
         duration: 1,
         delay: 0.5,
     });
