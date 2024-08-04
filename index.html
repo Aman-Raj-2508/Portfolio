@@ -104,16 +104,43 @@
                         problems,
                         optimize performance, and bring creative ideas to life.</p>
                     <!-- Skills Experience Education -->
-                    <div class="about-me-container">
-                        <div class="skill">
-                            <h3>Skills</h3>
-                        </div>
-                        <div class="experience">
-                            <h3>Experience</h3>
-                        </div>
-                        <div class="education">
-                            <h3>Education</h3>
-                        </div>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            Skills
+                        </p>
+                        <p class="tab-links" onclick="opentab('experience')">
+                            Experience
+                        </p>
+                        <p class="tab-links" onclick="opentab('education')">
+                            Education
+                        </p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML</span><br>Designing frontend</li>
+                            <li><span>CSS</span><br>Designing frontend</li>
+                            <li><span>JavaScript</span><br>Designing frontend</li>
+                            <li><span>DSA</span><br>DSA</li>
+                            <li><span>MERN STACK</span><br>Designing backend</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>HTML</span><br>Designing frontend</li>
+                            <li><span>CSS</span><br>Designing frontend</li>
+                            <li><span>JavaScript</span><br>Designing frontend</li>
+                            <li><span>DSA</span><br>DSA</li>
+                            <li><span>MERN STACK</span><br>Designing backend</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>HTML</span><br>Designing frontend</li>
+                            <li><span>CSS</span><br>Designing frontend</li>
+                            <li><span>JavaScript</span><br>Designing frontend</li>
+                            <li><span>DSA</span><br>DSA</li>
+                            <li><span>MERN STACK</span><br>Designing backend</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -148,9 +175,88 @@
                     results.
                 </p>
             </div>
+            <!----------- Portfolio------------->
+            <div id="portfolio">
+                <div class="container">
+                    <h1 class="sub-title">My Work</h1>
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="./images/Shopcart.jpg">
+                            <div class="layer">
+                                <h3>Shop Cart</h3>
+                                <p>This is Shopping website that lets you shop online with a wide range of products
+                                    avaiable.
+                                    Visit the site.
+                                </p>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="./images/Spotify.jpg">
+                            <div class="layer">
+                                <h3>Spotify</h3>
+                                <p>This is a Spofity Home page with some functionality of music player.It is in progress
+                                    in order to funtion properly.Visit the site.
+                                </p>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="./images/weather-forecaste.jpg">
+                            <div class="layer">
+                                <h3>Weather Forecast</h3>
+                                <p>This is weather app that let's you know the weather of your location.Let's check it.
+                                    Visit the site.
+                                </p>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="./images/password-generator.jpg">
+                            <div class="layer">
+                                <h3>Password Generator</h3>
+                                <p>This is a password generator tool that let you generate random passwords for enhanced
+                                    security.
+                                    Visit the site.
+                                </p>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="./images/tic-tac-toe.jpg">
+                            <div class="layer">
+                                <h3>Tic-Tac-Toe</h3>
+                                <p>This is tic-tac-toe game that lets you play online.
+                                    Visit the site.
+                                </p>
+                                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </div>
+
+
+    <!-- Javascript -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
         integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -336,36 +336,58 @@ i {
     color: #ffffff;
 }
 
-.about-me-container {
+.tab-titles {
     display: flex;
     align-items: center;
-    gap: 4rem;
     padding: 2rem 0 0 0;
-    animation: 5s ease 0s infinite normal none running color-animation;
+    animation: color-animation 5s infinite;
 }
 
-.about-me-container h3 {
+.tab-links {
+    margin-right: 3rem;
+    font-size: 1.25rem;
+    font-weight: 500;
     cursor: pointer;
-    width: fit-content;
-    font-size: 1rem;
     position: relative;
 }
 
-.about-me-container h3::after {
+.tab-links::after {
     content: '';
     width: 0;
-    /* To hide the line initially*/
     height: 3px;
-    position: absolute;
     background: #ff004f;
-    left: 50%;
-    bottom: -6px;
-    transition: all 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
 }
 
-.about-me-container h3:hover::after {
-    left: 0;
-    width: 100%;
+.tab-links.active-link::after {
+    width: 80%;
+}
+
+.tab-contents {
+    margin-top: 1rem;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 0.8rem 0;
+    font-family: 1rem;
+}
+
+.tab-contents ul li span {
+    color: #b54769;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
 }
 
 /* Project-Section */
@@ -379,7 +401,6 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10rem;
 }
 
 .project-heading h1 {
@@ -404,6 +425,91 @@ i {
 section {
     padding-top: 5rem;
 }
+
+/* Portfolio */
+
+.sub-title {
+    margin: 2rem auto;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    border: 1px solid #b54769;
+    width: fit-content;
+    border-radius: 1.25rem;
+    padding: 1rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+}
+
+.sub-title:hover {
+    animation: updown 3s linear infinite;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    overflow: hidden;
+    transition: height 0.8s ease-in-out;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.layer a {
+    margin-top: 2.5rem;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* For zooming the immage */
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
 
 .js {
     margin: 10rem auto;
