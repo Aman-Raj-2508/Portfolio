@@ -438,10 +438,12 @@ section {
     border-radius: 1.25rem;
     padding: 1rem;
     background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .sub-title:hover {
-    animation: updown 3s linear infinite;
+    transform: scale(1.1);
 }
 
 .work-list {
