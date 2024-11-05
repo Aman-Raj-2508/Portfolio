@@ -135,3 +135,10 @@
         height: 7rem;
     }
 }
+
+@media (max-width:375px) {
+    .nav-tags>i {
+        color: red;
+        display: inline-block;
+    }
+}

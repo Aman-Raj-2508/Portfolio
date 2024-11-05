@@ -519,3 +519,87 @@ section {
     height: 300px;
     background-color: rebeccapurple;
 }
+
+/* Contact-section */
+
+#Contact-tab {
+    /* padding-top: 25%; */
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    margin: 0 auto;
+    width: 95%;
+    height: 100%;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 65%;
+}
+
+.contact-left p {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 0.75rem;
+    font: 1.25rem;
+    animation: 5s ease 0s infinite normal none running color-animation;
+}
+
+.btn.btn-2 {
+    display: inline-block;
+    margin: 1rem auto;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #fff;
+    border: 1px solid #b54769;
+    width: fit-content;
+    border-radius: 1.25rem;
+    padding: 1rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #262626;
+    padding: 1rem;
+    margin: 1rem;
+    color: #fff;
+    font-size: 1.15rem;
+    border-radius: 6px;
+}
+
+form .btn-3 {
+    display: inline-block;
+    font-weight: 600;
+    color: #fff;
+    border: 1px solid #b54769;
+    width: fit-content;
+    border-radius: 1.25rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    padding: 1rem 4rem;
+    font-size: 1.15rem;
+    cursor: pointer;
+    margin: 1.2rem auto;
+}
