@@ -520,86 +520,54 @@ section {
     background-color: rebeccapurple;
 }
 
-/* Contact-section */
-
-#Contact-tab {
-    /* padding-top: 25%; */
-}
-
-.contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    position: relative;
-    margin: 0 auto;
-    width: 95%;
-    height: 100%;
-}
-
+/* Contact-section Of Home tab*/
 .contact-left {
-    flex-basis: 35%;
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: capitalize;
+    background: linear-gradient(90.21deg, rgba(255, 128, 128, 0.5) -5.91%, rgba(255, 192, 192, 0.5) 111.58%);
+    padding: 1% 2%;
+    border-radius: 5px;
+    margin: 4rem 0;
+    overflow: hidden;
+    animation: updown 3s linear infinite;
 }
 
-.contact-right {
-    flex-basis: 65%;
+.contact-left i {
+    position: relative;
+    width: fit-content;
+    gap: 0.5rem;
+    text-transform: capitalize;
+    padding: 1% 2%;
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+
 }
 
-.contact-left p {
-    margin-top: 2rem;
-    font-size: 1.25rem;
-}
-
-.contact-left p i {
-    color: #ff004f;
-    margin-right: 0.75rem;
-    font: 1.25rem;
-    animation: 5s ease 0s infinite normal none running color-animation;
+.icon-mail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.85rem;
 }
 
 .btn.btn-2 {
-    display: inline-block;
-    margin: 1rem auto;
+    display: flex;
+    align-items: center;
     font-size: 1.25rem;
     font-weight: 600;
     color: #fff;
-    border: 1px solid #b54769;
     width: fit-content;
     border-radius: 1.25rem;
-    padding: 1rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-    transition: transform 0.5s ease-in-out;
+    padding: 0.5rem;
     overflow: hidden;
-}
-
-.contact-right form {
-    width: 100%;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    border: 0;
-    outline: none;
-    background-color: #262626;
-    padding: 1rem;
-    margin: 1rem;
-    color: #fff;
-    font-size: 1.15rem;
-    border-radius: 6px;
-}
-
-form .btn-3 {
-    display: inline-block;
-    font-weight: 600;
-    color: #fff;
-    border: 1px solid #b54769;
-    width: fit-content;
-    border-radius: 1.25rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-    transition: transform 0.5s ease-in-out;
-    overflow: hidden;
-    padding: 1rem 4rem;
-    font-size: 1.15rem;
-    cursor: pointer;
-    margin: 1.2rem auto;
+    text-decoration: none;
 }
