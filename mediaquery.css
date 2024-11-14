@@ -74,23 +74,12 @@
         flex-direction: column-reverse;
     }
 
-    /* .nav-tags .nav-tag-div {
-        display: none;
-    } */
-
-    /* .nav-tags>i {
-        color: red;
-        display: inline-block;
-    } */
-
-
     .nav-tags>.nav-tag-div a {
         color: #fff;
         text-decoration: none;
         font-size: 1.25rem;
         font-weight: 500;
         position: relative;
-        /* opacity: 1; */
         animation: none;
     }
 
