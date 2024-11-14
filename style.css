@@ -39,7 +39,22 @@ body {
 
 .nav-tags>.nav-tag-div {
     display: flex;
+    gap: 4rem;
+}
+
+.nav-tags>.nav-tag-div>ul {
+    display: flex;
     gap: 1rem;
+    align-items: space-between;
+    list-style-type: none;
+}
+
+.nav-tag-div>ul>i {
+    display: none;
+}
+
+.nav-tag-div>i {
+    display: none;
 }
 
 .nav-tags>.nav-tag-div a {
